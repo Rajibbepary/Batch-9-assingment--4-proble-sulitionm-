@@ -120,6 +120,186 @@ function monthlySavings(arr, livingCost) {
     return savings >= 0 ? savings : 'earn more'
 }
 
-console.log(monthlySavings([1000, 2000, 3000, 5400]));
-console.log(monthlySavings([1000, 2000, 2500, 5000]));
+// console.log(monthlySavings([1000, 2000, 3000, 5400]));
+//console.log(monthlySavings([1000, 2000, 2500, 5000]));
 
+//Conceptual Session problem-01
+function maxNumber(array){
+
+    if(!Array.isArray(array)){
+        return 'this is not an array'
+    }
+
+    let max = array[0];
+    for(let i = 1; i < array.length; i++){
+        if(array[i] > max){
+            max = array[i]
+        }
+    }
+    return max
+}
+//const numbers = [2, 4, 21, 5, 6, 23, 20, 40, 70];
+// const numbers = true;
+// const result = maxNumber(numbers)
+// console.log(result);
+
+//Conceptual Session problem-0
+
+// function showInfo(info){
+
+//     if(typeof info !== "object"){
+//         return 'please provide a valid object'
+//     }
+
+//     const result = 'My name is'+ ' ' + info.name +' ' +'I am from' + ' ' + info.address;
+//     return result;
+// }
+
+// const person = {
+//     name:"Rajib",
+//     address:"Faridpur"
+// }
+
+//const x =showInf o(person);
+//const x =showInfo('person');
+//console.log(x);
+
+const person = {
+    name:"Rajib",
+    address:"Faridpur"
+}
+function createEmail(info){
+
+    if(typeof info !== 'object'){
+        return 'Invalid object';
+    }
+    const result =info.name+"@"+info.address+".com";
+    return result;
+
+}
+//console.log(createEmail('person'));
+
+
+//Conceptual Session problem -03
+
+function monthlySavings(income){
+
+    if(typeof income !== 'number'){
+        return 'Invalid input'
+    }
+
+    const houseRent = 5000;
+    const mealCost = 3000;
+    const personalExpense =2000;
+    const totalExpennse = houseRent + mealCost + personalExpense;
+
+    if(totalExpennse > income){
+        return 'Earn more';
+    }
+
+    const savings = income - totalExpennse;
+    return savings;
+}
+
+ //const result = monthlySavings(7000)
+// console.log(result);
+
+
+//Conceptual Session problem -04
+
+const x = [3, false, 2, true, "hello", false, 22, 60, 10,{name:'rajij'}];
+
+
+function countBoolean(array){
+    if(!Array.isArray(array)){
+        return 'please provide valid arry'
+    }
+    let count = 0;
+
+    for(let item of array){
+        if(typeof item === 'boolean'){
+            count ++
+        }
+    }
+    return count;
+
+    // for(let item of array){
+    //     if(typeof item === 'number'){
+    //         count ++
+    //     }
+    // }
+    // return count;
+}
+//const result =countBoolean(x);
+//console.log(result);
+
+
+//problem conceptual session -05 
+
+function rickshawVara(peoples){
+
+
+    const bus = 50;
+    const micro = 15;
+    const rickshawCost = 20;
+
+    const remainAfterbus = peoples % bus;
+
+    const remainAftermicro = remainAfterbus % micro;
+
+    return remainAftermicro * rickshawCost;
+}
+//console.log(rickshawVara(234));
+
+
+//problem conceptual session -06
+
+const person1 = {
+    name:"Abul kashem",
+    honors:40,
+    hsc:30,
+    isFFfamily:false
+}
+
+const person2 = {
+    name:"mokbel",
+    honors:45,
+    hsc:32,
+    isFFfamily:true
+}
+
+function jobSelection(info) {
+
+    if(typeof info !== "object") {
+        return "Invalid object";
+    }
+
+    let total_marks = info.honors + info.hsc;
+    if(info.isFFfamily){
+        total_marks = total_marks + (total_marks * 0.2);
+    }
+
+    console.log(total_marks);
+
+
+if(info.isFFfamily && total_marks >= 80) {
+    return "aho vateja aho..chakri to tomai.."
+}else if(info.isFFfamily && total_marks < 80) {
+    return "bad luck vateja aho..next time try.."
+} else if(!info.isFFfamily && total_marks >= 80) {
+    return "you get the job...";
+}
+ else if(!info.isFFfamily && total_marks < 80){
+    return "Rajakar rajakar..."
+}
+
+
+    //console.log(total_marks);
+    // if (total_marks >= 80) {
+    //     return "you get the job"
+    // }else{
+    //     return "you failed"
+    // }
+}
+
+console.log(jobSelection(person2));
