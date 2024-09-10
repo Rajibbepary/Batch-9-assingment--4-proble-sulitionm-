@@ -302,4 +302,5 @@ if(info.isFFfamily && total_marks >= 80) {
     // }
 }
 
-console.log(jobSelection(person2));
+//console.log(jobSelection(person2));
+
