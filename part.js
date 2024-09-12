@@ -102,13 +102,42 @@ const uniqueArray = noDuplicate(biryankhor);
 
 
 const min = Math.min(12, 4, 19, 40, 32, 50,);
-console.log(min);//low number found
+//console.log(min);//low number found
 const max = Math.max(12, 4, 19, 40, 32, 50,);
-console.log(max);//hight number founnd
+//console.log(max);//hight number founnd
 
-console.log(Math.PI);
-console.log(Math.abs(5-10));
-console.log(Math.round(4.64));
-console.log(Math.floor(2.99995))
-console.log(Math.ceil(2.99995))
-console.log(Math.random())
+// console.log(Math.PI);
+// console.log(Math.abs(5-10));
+// console.log(Math.round(4.64));
+// console.log(Math.floor(2.99995))
+// console.log(Math.ceil(2.99995))
+// console.log(Math.random())
+
+
+const jim = 96;
+const tim = 89;
+const kim = 68;
+
+if (jim > tim && jim > kim){
+    //console.log('jim is the ultimate boss');
+} else if (tim > jim && tim > kim) {
+    console.log('tim is the boss');
+} else{
+    console.log('kim is the kardashians boss');
+}
+
+
+//maxnumber count 
+
+const heights = [65, 66, 72, 78, 60, 90, 12];
+function getMax(numbers){
+    let max = numbers[0];
+    for(const num of numbers){
+        if(num > max){
+            max = num;
+        }
+    }
+    return max
+}
+const maxx = getMax(heights);
+console.log(maxx);

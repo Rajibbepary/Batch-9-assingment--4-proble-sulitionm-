@@ -1,22 +1,47 @@
 
 
-//problem-1
-function calculateMoney(ticketSale){
+// //problem-1
+// // function calculateMoney(ticketSale){
 
-    if(ticketSale < 0 || typeof ticketSale !=='number'){
-        return 'Invalid Number';
-    }
+// //     if(ticketSale < 0 || typeof ticketSale !=='number'){
+// //         return 'Invalid Number';
+// //     }
 
 
-    //let remainingAmount = ticketSale * 120 -(500 + 8 *50);
-   // return remainingAmount;
-   return ticketSale * 120 -(500 + 8 *50)
-}
+// //     let remainingAmount = ticketSale * 120 -(500 + 8 *50);
+// //    return remainingAmount;
+// //    //return ticketSale * 120 -(500 + 8 *50)
+// // }
+// // console.log(calculateMoney (10));
+// // console.log(calculateMoney (1055));
+// // console.log(calculateMoney (93));
+// // console.log(calculateMoney (-130));
+// // console.log(calculateMoney ('htm'));//chance part
+
+// function calculateMoney(ticketSale){
+
+//     if(ticketSale < 0 || typeof ticketSale !=='number'){
+//         return 'Invalid Number';
+//     }
+
+
+//     let remainingAmount = ticketSale * (7000 * .20);
+//    return remainingAmount;
+//    //return ticketSale * 120 -(500 + 8 *50)
+// }
 // console.log(calculateMoney (10));
-// console.log(calculateMoney (1055));
-// console.log(calculateMoney (93));
-// console.log(calculateMoney (-130));
-// console.log(calculateMoney ('htm'));//chance part
+// // console.log(calculateMoney (1055));
+// // console.log(calculateMoney (93));
+// // console.log(calculateMoney (-130));
+// // console.log(calculateMoney ('htm'));//chance part
+
+
+
+
+
+
+
+
 
 //problem-2
 function checkName (name) {
@@ -85,20 +110,19 @@ function password(obj) {
     let passwordString = capitalSiteName + '#' + obj.name + '@' + obj.birthYear;
     return passwordString
 }
-// console.log(password({name: 'kolimuddin', birthYear: 1999, siteName: 'google' }));
+//  console.log(password({name: 'kolimuddin', birthYear: 1999, siteName: 'google' }));
 
-// console.log(password({name: 'rahat', birthYear: 2002, siteName: 'Facebook'}));
+//  console.log(password({name: 'rahat', birthYear: 2002, siteName: 'Facebook'}));
 
-// console.log(password({name: 'toky', birthYear: 200, siteName: 'Facebook'}));
-// console.log(password({name: 'maisha', birthYear: 2002}));
+//  console.log(password({name: 'toky', birthYear: 200, siteName: 'Facebook'}));
+//  console.log(password({name: 'maisha', birthYear: 2002}));
 
 
 //problem-05
-
 function monthlySavings(arr, livingCost) {
     if (!Array.isArray(arr) || typeof livingCost !== 'number')
         {
-        //return 'invalid input'
+        return 'invalid input'
     }
 
     //calculate total income 
@@ -120,8 +144,10 @@ function monthlySavings(arr, livingCost) {
     return savings >= 0 ? savings : 'earn more'
 }
 
-// console.log(monthlySavings([1000, 2000, 3000, 5400]));
-//console.log(monthlySavings([1000, 2000, 2500, 5000]));
+// console.log(monthlySavings([1000, 2000, 3000],5400));
+//console.log(monthlySavings([1000, 2000, 2500],5000))
+
+
 
 //Conceptual Session problem-01
 function maxNumber(array){
