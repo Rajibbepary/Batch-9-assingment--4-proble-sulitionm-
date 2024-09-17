@@ -35,14 +35,6 @@
 // // console.log(calculateMoney (-130));
 // // console.log(calculateMoney ('htm'));//chance part
 
-
-
-
-
-
-
-
-
 //problem-2
 function checkName (name) {
 
@@ -233,7 +225,7 @@ function monthlySavings(income){
 
 //Conceptual Session problem -04
 
-const x = [3, false, 2, true, "hello", false, 22, 60, 10,{name:'rajij'}];
+//const x = [3, false, 2, true, "hello", false, 22, 60, 10,{name:'rajij'}];
 
 
 function countBoolean(array){
@@ -329,4 +321,11 @@ if(info.isFFfamily && total_marks >= 80) {
 }
 
 //console.log(jobSelection(person2));
+
+
+
+let x = 5;
+
+console.log(x != 8 );
+
 

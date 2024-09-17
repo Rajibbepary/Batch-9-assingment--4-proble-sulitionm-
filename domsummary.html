@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <div id="comment-container">
+        <h1 id="handler-status">Final Dom Event Handlers</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum, fugiat ducimus. Consequatur reiciendis modi, ipsum consectetur voluptas possimus nihil necessitatibus ducimus eos! Laborum doloremque quos corrupti reprehenderit eius iusto a.</p>
+        <p>Animi fuga ratione voluptates nihil soluta placeat saepe labore dolores id iste. Provident, omnis consequuntur illo dolor voluptatum labore exercitationem dolorum maiores temporibus commodi quidem accusantium doloribus? Iste, suscipit laborum.</p>
+        <p>Suscipit, recusandae nemo, quia tempore commodi quaerat, similique unde sunt optio aut impedit cupiditate distinctio. Id consequuntur quas, modi impedit fuga hic nam quam distinctio! Laborum ipsam cupiditate voluptates doloribus?</p>
+    </div>
+
+
+<div>
+    <textarea name="" id="new-comment" cols="50" rows="5"></textarea><br>
+<button id="btn-post">New text add</button>
+</div>
+    
+<br><br>
+<input type="text" id="input-field">
+<button id="btn-update">update</button>
+<p id="demo"></p>
+
+
+<h1 id="secret-info">My secret info</h1>
+<input id="delete-confirm" type="text" placeholder="please type delete">
+<button id="btn-delete" disabled>Delete</button>
+<script>
+document.getElementById('delete-confirm').addEventListener('keyup', function(event){
+    const text = event.target.value;
+    const deleteButton = document.getElementById('btn-delete');
+    if(text === 'delete') {
+        deleteButton.removeAttribute('disabled');
+    }else{
+        deleteButton.setAttribute('disabled', true)
+    }
+})
+document.getElementById('btn-delete').addEventListener('click', function(){
+    const secret = document.getElementById('secret-info');
+    secret.style.display = 'none';
+})
+   
+    
+
+
+
+//input textare message
+
+document.getElementById('btn-post').addEventListener('click', function(){
+    const commentBox = document.getElementById('new-comment');
+    const newComment = commentBox.value;
+    const commentContainer = document.getElementById('comment-container');
+    const p = document.createElement('p')
+    p.innerText = newComment;
+    commentContainer.appendChild(p);
+    commentBox.value = '';
+})
+//input filed 
+document.getElementById('btn-update').addEventListener('click', function(){
+    const inputField  = document.getElementById('input-field');
+    const inputText = inputField.value;
+    //document.getElementById('demo').innerText = inputText;
+    const p = document.getElementById('demo');
+    p.innerText = inputText;
+    inputField.value = '';
+})
+
+</script>
+
+</body>
+</html>
